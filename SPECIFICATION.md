@@ -96,7 +96,7 @@ In order to properly comply with the ERC-4626 standard and still allow losses, b
 #### Strategy Shares
 The strategy issues shares to each depositor to track their relative share of assets. Shares are ERC20 transferable yield-bearing tokens.
 
-They are ERC4626 compliant. Please read [ERC4626 compliance](https://hackmd.io/cOFvpyR-SxWArfthhLJb5g#ERC4626-compliance) to understand the implications. 
+They are ERC4626 compliant. Please read [ERC4626 compliance](https://github.com/yearn/yearn-vaults-v3/blob/master/TECH_SPEC.md#erc4626-compliance) to understand the implications. 
 
 #### Accounting
 The strategy will evaluate profit and losses from the yield generating activities. 
