@@ -169,7 +169,7 @@ abstract contract BaseStrategy {
     /**
      * @dev Can deploy up to '_amount' of 'asset' in the yield source.
      *
-     * This function is called at the end of a {deposit} or {mint}
+     * This function is called at the end of a `deposit` or `mint`
      * call. Meaning that unless a whitelist is implemented it will
      * be entirely permissionless and thus can be sandwiched or otherwise
      * manipulated.
@@ -185,7 +185,7 @@ abstract contract BaseStrategy {
      * NOTE: The amount of 'asset' that is already loose has already
      * been accounted for.
      *
-     * This function is called during {withdraw} and {redeem} calls.
+     * This function is called during `withdraw` and `redeem` calls.
      * Meaning that unless a whitelist is implemented it will be
      * entirely permissionless and thus can be sandwiched or otherwise
      * manipulated.
@@ -341,9 +341,9 @@ abstract contract BaseStrategy {
      * be more than is currently deployed.
      *
      * NOTE: This will not realize any profits or losses. A separate
-     * {report} will be needed in order to record any profit/loss. If
+     * `report` will be needed in order to record any profit/loss. If
      * a report may need to be called after a shutdown it is important
-     * to check if the strategy is shutdown during {_harvestAndReport}
+     * to check if the strategy is shutdown during `_harvestAndReport`
      * so that it does not simply re-deploy all funds that had been freed.
      *
      * EX:
@@ -361,10 +361,10 @@ abstract contract BaseStrategy {
 
     /**
      * @notice Can deploy up to '_amount' of 'asset' in yield source.
-     * @dev Callback for the TokenizedStrategy to call during a {deposit}
-     * or {mint} to tell the strategy it can deploy funds.
+     * @dev Callback for the TokenizedStrategy to call during a `deposit`
+     * or `mint` to tell the strategy it can deploy funds.
      *
-     * Since this can only be called after a {deposit} or {mint}
+     * Since this can only be called after a `deposit` or `mint`
      * delegateCall to the TokenizedStrategy msg.sender == address(this).
      *
      * Unless a whitelist is implemented this will be entirely permissionless
